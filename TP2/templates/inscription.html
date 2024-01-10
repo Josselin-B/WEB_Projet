@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/login" method="post">
+<ul>
+<li>
+<label for="lgn">Nom</label>
+<input type="text" id="name" name="user_login" />
+</li>
+    <li>
+      <label for="msg">mot de passe</label>
+      <input type="text" id="passwd" name="pswdFrst" />
+    </li>
+    <div class="button">
+  <button type="submit">S'inscrire</button>
+</div>
+
+</ul>
+</form>
+
+<a href="{{ url_for('TP1') }}">retour</a>
+
+</body>
+</html>

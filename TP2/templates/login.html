@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/login" method="post">
+<ul>
+<li>
+<label for="lgn">Login</label>
+<input type="text" id="lgn" name="user_login" />
+</li>
+    <li>
+      <label for="msg">Message</label>
+      <input type="password" id="pswd" name="user_pswd" />
+    </li>
+    <div class="button">
+  <button type="submit">Se connecter</button>
+</div>
+
+</ul>
+</form>
+
+<a href="{{ url_for('TP1') }}">retour</a>
+
+</body>
+</html>

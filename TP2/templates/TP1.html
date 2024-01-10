@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href='/staticFiles/main.css' />
+
+<title>Page Title</title>
+<style>
+	/* styles.css */
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    //background-image: url(/static/1702899372628.jpg);
+    
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    //background-image: url(/static/1702899270742.jpg);
+}
+
+/* Style pour la section principale */
+section {
+    margin: 20px;
+}
+
+/* Style pour les titres h1 et h2 */
+h1, h2 {
+    color: #333;
+    background-image: url(/statc/);
+}
+
+/* Style pour les paragraphes */
+p {
+    line-height: 1.5;
+}
+
+/* Style pour la liste non ordonnée */
+ul {
+    list-style-type: none;
+    padding: 0;
+    //background-image: url(/static/1702899270742.jpg);
+}
+
+/* Style pour les liens de la navigation */
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #333;
+    //background-image: url(/static/1702899270748.jpg) ;
+    border-radius: 5px;
+}
+
+/* Style pour les liens de la navigation au survol */
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Style pour la table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style pour les cellules de la table */
+table, th, td {
+    border: 1px solid #333;
+}
+
+/* Style pour le pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+
+</head>
+<body>
+<header>
+<h1>TP1 WEB</h1>
+<section>
+<h2>BOUCHER Josselin</h2>
+<p>Document HTML du tp1 web presantant les differents éléments d'HTML</p>
+</section>
+</header>
+<h1>{% if username != "" %}
+	<p>{{ username }}</p>
+    {% else %}
+    	<p>{{ "non connecter" }}</p>
+    {% endif %}
+</h1>
+<h1>Les differentes balise HTML</h1>
+	<section>
+	<h2 title="head">head</h2>
+	<p>La balise head concerne tout ce qui est caractère de la page,metadonné</p>
+	<h2 title="header">header</h2>
+	<p>Balise pour regrouper tout les éléments d'introduction du document HTML</p>
+    <h2 title="tilte">h1</h2>
+    <p>Balise pour afficher un élément sous forme de titre</p>
+    <h2 title="title">title</h2>
+    <p>Title n'est utilisable que dans la section head et cela définit le titre du document<p>
+    <h2 tilte="title">body</h2>
+    <p>Parti html qui apparait sur la machine client</p>
+    <h2 title="article"></h2>
+    <p></p>
+    <h2 class="title">p</h2>
+    <p>Balise qui sert a afficher du texte</p>
+    <h2 class="title">div</h2>
+    <p>Balise neutre</p>
+    <h2 class="title">a</h2>
+	<p>Balise pour les liens url, sert a la navigation entre page web</p>  
+    <h2 class="title">ul</h2>
+    <p>Pour afficher des listes d'elements</p>
+    <h2 class="title">ol</h2>
+    <p>Pour afficher des listes d'elements de façon ordonnés</p>
+    <h2 title="article">nav</h2>
+    <p>Nav est une balise servant a créer une liste de lien</p>
+    <ul>
+    	<li>head</li>
+        <li>header</li>
+    	<li>h1</li>
+        <li>title</li>
+        <li>body</li>
+        <li>p</li>
+        <li>div</li>
+        <li>a</li>
+        <li>ul</li>
+        <li>ol</li>
+        <li>nav</li>
+    </ul>
+    <table attribut border="1">
+   		<tr>
+        	<td>body</td>
+            <td>...</td>
+        </tr>
+        <tr>
+        	<td>body</td>
+            <td>a</td>
+            <td>href</td>
+        </tr>
+
+        <tr>
+        	<td>body</td>
+            <td>div</td>
+        </tr>
+        <tr>
+        	<td>body</td>
+            <td>h1</td>
+        </tr>
+        <tr>
+        	<td>body</td>
+            <td>header</td>
+        </tr>
+         <tr>
+        	<td>body</td>
+            <td>nav</td>
+        </tr>
+         <tr>
+        	<td>body</td>
+            <td>ol</td>
+        </tr>
+        <tr>
+        	<td>body</td>
+            <td>p</td>
+        </tr>
+        <tr>
+        	<td>head</td>
+            <td>title</td>
+        </tr>
+        <tr>
+        	<td>body</td>
+            <td>ul</td>
+        </tr>
+        <tr>
+        	<td>head</td>
+            <td>...</td>
+        </tr>
+    </table>
+    <nav>
+    	<a href="{{ url_for('section') }}">section</a> |
+  		<a href="{{ url_for('lister') }}">lister</a> |
+ 	    <a href="{{ url_for('index') }}">index</a> |
+ 	    <a href="{{ url_for('formulaire') }}">formulaire</a> |
+ 	    <a href="{{ url_for('forum') }}">forum</a> |
+	    <a href="{{ url_for('login') }}">login</a> |
+	    <a href="{{ url_for('logout') }}">logout</a> |
+	    <a href="{{ url_for('inscription') }}">inscription</a> |
+    </nav>
+</body>
+</html>

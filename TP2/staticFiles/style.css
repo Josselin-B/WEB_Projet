@@ -1,0 +1,77 @@
+/* styles.css */
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Style pour l'en-tête */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style pour la section principale */
+section {
+    margin: 20px;
+}
+
+/* Style pour les titres h1 et h2 */
+h1, h2 {
+    color: #333;
+}
+
+/* Style pour les paragraphes */
+p {
+    line-height: 1.5;
+}
+
+/* Style pour la liste non ordonnée */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style pour les liens de la navigation */
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #333;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* Style pour les liens de la navigation au survol */
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Style pour la table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style pour les cellules de la table */
+table, th, td {
+    border: 1px solid #333;
+}
+
+/* Style pour le pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
