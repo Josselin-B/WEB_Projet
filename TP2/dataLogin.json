@@ -1,3 +1,16 @@
-{ "session": [
-	{"login": "admin", "password": "1234"},
-	{"login": "test1", "password": "5678"}]}
+{
+  "session": [
+    {
+      "login": "admin",
+      "password": "1234"
+    },
+    {
+      "login": "test1",
+      "password": "5678"
+    },
+    {
+      "login": "a",
+      "password": "a"
+    }
+  ]
+}

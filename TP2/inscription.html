@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/inscription" method="post">
+<ul>
+<li>
+<label for="lgn">Nom</label>
+<input type="text" id="user_log" name="user_log" required/>
+</li>
+    <li>
+      <label for="msg">mot de passe</label>
+      <input type="text" id="pswdFrst" name="pswdFrst" required/>
+    </li>
+    <div class="btn">
+  <button type="sub">Inscription</button>
+</div>
+
+</ul>
+</form>
+
+<a href="{{ url_for('TP1') }}">revenir</a>
+
+</body>
+</html>
