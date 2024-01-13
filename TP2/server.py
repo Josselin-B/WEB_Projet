@@ -14,6 +14,20 @@ def TP1():
     	return render_template('TP1.html',username=username)
     return render_template('TP1.html')
 
+@app.route('/inscription', methods=['GET', 'POST'])
+def inscription():
+        if request.method == ('POST' or 'GET'):
+        	print(request.form)
+        	with open('dataLogin.json', 'r') as my_file:
+        		data = json.load(my_file)
+        	new_log = request.form['user_log']
+        	new_password = request.form['pswdFrst']
+        	data['session'].append({"login": new_log, "password": new_password})
+        	with open('dataLogin.json', 'w') as my_file:
+        		json.dump(data, my_file, indent=2)
+        	return 'Inscription validé<br><a href="/login">Retenter</a>'
+        return render_template('inscription.html') 
+
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
@@ -26,6 +40,7 @@ def section():
 def lister():
     return render_template('lister.html')
     
+
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
@@ -58,8 +73,7 @@ def login():
     	return 'Login ou mot de passe incorect<br><a href="/login">Retenter</a>'	
     	
     return render_template('login.html')
-
-
+    
 @app.route('/register')
 def register():
     with open('data.json','w') as my_file:
@@ -71,11 +85,6 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('TP1'))    
 
-@app.route('/inscription', methods=['GET', 'POST'])
-def inscription():
-        if request.method == 'POST':
-        	print(request.form)
-        return render_template('inscription.html')
 
 @app.route('/forum', methods=['GET', 'POST'])
 def forum():
